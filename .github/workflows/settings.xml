@@ -1,9 +1,9 @@
 <settings>
   <servers>
     <server>
-      <id>github</id>
-      <username>Ganavi2001</username>
-      <password>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</password>
+      <id>nexus-repo</id>
+      <username>${env.MAVEN_USERNAME}</username>
+      <password>${env.MAVEN_PASSWORD}</password>
     </server>
   </servers>
 </settings>
