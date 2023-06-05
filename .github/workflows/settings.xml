@@ -1,9 +1,21 @@
 <settings>
-  <servers>
-    <server>
-      <id>nexus-repo</id>
-      <username>${env.MAVEN_USERNAME}</username>
-      <password>${env.MAVEN_PASSWORD}</password>
-    </server>
-  </servers>
+  <!-- Other settings -->
+
+  <profiles>
+    <profile>
+      <id>nexus-profile</id>
+      <repositories>
+        <repository>
+          <id>nexus-repo</id>
+          <url>http://localhost:8081/repository/release/</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+  
+  <activeProfiles>
+    <activeProfile>nexus-profile</activeProfile>
+  </activeProfiles>
+
+  <!-- Other settings -->
 </settings>
